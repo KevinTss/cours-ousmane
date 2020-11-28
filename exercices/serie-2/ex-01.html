@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercice 01</title>
+</head>
+<body>
+  <script>
+    /*
+      Ecrivez un programme qui propose un petit jeu à l’utilisateur. 
+      Le programme doit demander un nombre à l’utilisateur et ensuite lui 
+      demander le carré de ce nombre. Si l’utilisateur répond bien, le jeu 
+      recommence. Si l’utilisateur se trompe, le programme s’arrête , 
+      affiche l’erreur et le nombre de bonnes réponses.
+    */
+
+    let isGameRunning = true;
+
+    /*
+     * Tant que le jeu tourne on execute les étapes
+     */
+    while (isGameRunning) {
+      const number = Number(prompt('Entrer un nombre :'));
+      const square = Number(prompt(`Entrer le carré de ${number} :`));
+
+      const correctSquare = number * number
+
+      if (square !== correctSquare) {
+        alert(`
+          Perdu!
+
+          Le carré de ${number} est ${correctSquare}
+          Votre réponse: ${square}
+        `)
+        isGameRunning = false;
+      }
+    }
+  </script>
+</body>
+</html>

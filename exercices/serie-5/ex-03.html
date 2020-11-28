@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercice 03</title>
+</head>
+<body>
+  <script>
+    /*
+      Initialise un vecteur de 10000 entiers et calcule la la somme des 
+      éléments du vecteur dont les indices sont pairs (V(2) + V(4) + V(6) + ...) 
+      et la somme de ceux dont les indices sont impairs (V(1) + V(3) + V(5) + ....).
+    */
+
+    const vecteur = [];
+
+    // Initialisation de 10 000 entiers
+    for (i = 0; i < 10000; i++) {
+      vecteur[i] = i + 1;
+    }
+
+    const sommeNombrePair = 0
+    const sommeNombreImpair = 0
+
+    // On classe les nombres
+    for (y = 0; y < vecteur.length; y++) {
+      // if (0) => false
+      if (y%2) {
+        // indice impair
+        sommeNombrePair += vecteur[y]
+      } else {
+        // indice pair
+        sommeNombreImpair += vecteur[y]
+      }
+    }
+
+    alert(`
+      La somme des nombres a indice pair est: ${sommeNombrePair}
+      La moyenne des nombres a indice impair est: ${sommeNombreImpair}
+    `)
+
+  </script>
+</body>
+</html>

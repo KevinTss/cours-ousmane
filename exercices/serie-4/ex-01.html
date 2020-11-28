@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercice 01</title>
+</head>
+<body>
+  <script>
+    /*
+      Ecrivez un algorithme qui demande 2 nombres à l’utilisateur et qui 
+      effectue la multiplication de ces 2 nombres en utilisant des additions 
+      successives
+    */
+
+    let number_1 = Number(prompt('Entrer un nombre :'));
+    let number_2 = Number(prompt('Entrer un deuxième nombre :'));
+
+    // si 3*4
+    // 3 + 3 + 3 + 3
+
+    let result = number_1
+    for (i = number_2 - 1; i > 0; i--) {
+      result += number_2;
+    }
+
+    alert(`Le resultat de ${number_1} * ${number_2} est: ${result}`);
+    
+  </script>
+</body>
+</html>

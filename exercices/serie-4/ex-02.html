@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercice 02</title>
+</head>
+<body>
+  <script>
+    /*
+      Demandez un nombre N à l’utilisateur et calculer la somme des N premiers 
+      entiers positifs
+    */
+
+    let number = Number(prompt('Entrer un nombre :'));
+
+    // si 5
+    // 1 + 2 + 3 + 4 + 5
+
+    let result = 0
+    for (i = 1; i <= number; i++) {
+      result += i;
+    }
+
+    alert(`Le resultat est: ${result}`);
+    
+  </script>
+</body>
+</html>

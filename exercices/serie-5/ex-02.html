@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercice 02</title>
+</head>
+<body>
+  <script>
+    /*
+      Initialise un vecteur de 10000 entiers et calcule la moyenne des nombres 
+      pairs et la moyenne des nombres impairs. (pour savoir si un nombre est 
+      pair ou impair, utiliser l’opérateur modulo : un nombre est pair si son 
+      modulo avec 2, c’est à dire le reste de la division par 2 vaut 0)
+    */
+
+    const vecteur = [];
+
+    // Initialisation de 10 000 entiers
+    for (i = 0; i < 10000; i++) {
+      vecteur[i] = i + 1;
+    }
+
+    const nombrePair = []
+    const nombreImpair = []
+
+    // On classe les nombres
+    for (y = 0; y < vecteur.length; y++) {
+      // if (0) => false
+      if (vecteur[y]%2) {
+        // impair
+        nombreImpair.push(vecteur[y])
+      } else {
+        // pair
+        nombrePair.push(vecteur[y])
+      }
+    }
+
+    let sommePair = 0
+    let sommeImpair = 0
+
+    // On calcule les sommes
+    for (x = 0; x < nombrePair.length; x++) {
+      sommePair += nombrePair[x]
+    }
+    for (x = 0; x < nombreImpair.length; x++) {
+      sommeImpair += nombreImpair[x]
+    }
+
+    // On calcules les moyennes
+    const moyennePair = sommePair / nombrePair.length
+    const moyenneImpair = sommeImpair / nombreImpair.length
+
+    alert(`
+      La moyenne des nombres pair est: ${moyennePair}
+      La moyenne des nombres impair est: ${moyenneImpair}
+    `)
+
+  </script>
+</body>
+</html>

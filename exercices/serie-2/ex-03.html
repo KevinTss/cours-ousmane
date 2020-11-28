@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercice 03</title>
+</head>
+<body>
+  <script>
+    /*
+      Ecrivez un programme qui calcule la factorielle d’un nombre 
+      donné par l’utilisateur.
+      
+      Ex. factorielle de 4 = 4*3*2*1
+      Ex. factorielle de 7 = 7*6*5*4*3*2*1
+    */
+
+    const number = Number(prompt('Entrer un nombre :'));
+    
+    const factorielCheck = number
+
+    let result = number
+
+    /*
+      On répète la boucle en function du nombre entré - 1
+
+      ex:
+      !4
+      - On boucle pour 3 (4 * 3 => 12)
+      - On boucle pour 2 (12 * 2 => 24)
+      - On boucle pour 1 (24 * 1 => 24)
+    */
+    for (i = number -1; i > 0; i--) {
+      // Afficher le detail dans la console
+      console.log(`${result} * ${i}`)
+
+      // Mettre à jour le résultat
+      result *= i
+    }
+
+    alert(`La factorielle de ${number} = ${result}`)
+  </script>
+</body>
+</html>

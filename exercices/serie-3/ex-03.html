@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercice 03</title>
+</head>
+<body>
+  <script>
+    /*
+      Un prof a de très grandes classes. Les cotes minimum et maximum de ses 
+      interros sont 0 et 5 .
+      Il voudrait encoder la liste des points d’une interro, terminer son 
+      encodage par –1 et ensuite savoir 
+      combien de cotes sont égales à 0, 
+      combien de cotes sont égales à 1, 
+      combien de cotes sont égales à 2, 
+      combien de cotes sont égales à 3, 
+      combien de cotes sont égales à 4 
+      et combien de cotes sont égales à 5. 
+      Ecrivez ce programme.
+    */
+
+    // Préparer la variables de stockages des cotes
+    const numbers = {
+      0: 0,
+      1: 0,
+      2: 0,
+      3: 0,
+      4: 0,
+      5: 0,
+    }
+
+    let number = Number(prompt(`Entrez une cote :`))
+
+    // Boucler 1000 fois
+    while (number != -1) {
+      number = Number(prompt(`Entrez une cote :`))
+
+      // En fonction du nombre entré, mettre a jour le bon comptage
+      if (number === 0) {
+        numbers[0] = numbers[0] + 1
+      } else if (number === 1) {
+        numbers[1] = numbers[1] + 1
+      } else if (number === 2) {
+        numbers[2] = numbers[2] + 1
+      } else if (number === 3) {
+        numbers[3] = numbers[3] + 1
+      } else if (number === 4) {
+        numbers[4] = numbers[4] + 1
+      } else if (number === 5) {
+        numbers[5] = numbers[5] + 1
+      }
+    }
+
+    // On calcule le nombre total de cotes
+    const total = numbers[0] + numbers[1] + numbers[2] + numbers[3] + numbers[4] + numbers[5]
+
+    alert(`
+      Vous avez entré ${total} cotes:
+      - ${numbers[0]} ont une note de '0'
+      - ${numbers[1]} ont une note de '1'
+      - ${numbers[2]} ont une note de '2'
+      - ${numbers[3]} ont une note de '3'
+      - ${numbers[4]} ont une note de '4'
+      - ${numbers[5]} ont une note de '5'
+    `)
+  </script>
+</body>
+</html>

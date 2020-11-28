@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercice 01</title>
+</head>
+<body>
+  <script>
+    /*
+      Initialise un vecteur de 10000 entiers demandés à l’utilisateur et 
+      inverse ce vecteur (le premier devient le dernier, le dernier le premier, 
+      le deuxième devient l’avant dernier et l’avant dernier devient 
+      ledeuxième, etc...
+    */
+
+    const vecteur = [];
+
+    // on simule la demande des entiers a l'utilisateur car trop long de 
+    // demander 10 000 entiers
+    for (i = 0; i < 10000; i++) {
+      vecteur[i] = i + 1;
+    }
+
+    // On inverse le tableau via un tableau de tampon
+    const reversedVecteur = []
+    for (y = 0; y < vecteur.length; y++) {
+      reversedVecteur[y] = vecteur[vecteur.length - (1 + y)];
+    }
+
+    // On affiche dans la console car trop long pour l'afficher à l'écran
+    console.log(vecteur)
+    console.log(reversedVecteur)
+  </script>
+</body>
+</html>

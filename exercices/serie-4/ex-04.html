@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercice 04</title>
+</head>
+<body>
+  <script>
+    /*
+      Trouver tous les nombres de 3 chiffres qui sont égaux à la somme des 
+      cubes de leurs chiffres.
+    */
+
+    // Exemple incorrect:
+    // 345 
+    // = 3^3 + 4^3 + 5^3 = 216
+    // 345 != 216 --> On affiche pas
+
+    // Exemple orrect:
+    // 153
+    // = 1^3 + 5^4 + 3^3 = 153
+    // 153 == 153 --> On affiche
+
+    let finalResult = `Les nombres sont :\n`;
+
+    for (i = 100; i < 1000; i++) {
+      // console.log('CASE ' + i)
+      // Récupérer les chiffres spéparément
+      // On comment par convertir le chiffre en chaine de caractère
+      // 100 -> '100'
+      const stringNumber = i.toString();
+
+      // Ensuite on le transforme en tableau de string pour chaque charactère
+      // '100' -> ['1', '0', '0']
+      const arrayNumbers = stringNumber.split('');
+
+      // Pour chaque nombre on calcule le cube et on additionne le résultat
+      let result = 0
+      for (y = 0; y < arrayNumbers.length; y++) {
+        const cube = arrayNumbers[y] * arrayNumbers[y] * arrayNumbers[y];
+        result+= cube;
+      }
+
+      // Si c'est égal on l'ajoute au chiffre à afficher
+      if (i === result) {
+        finalResult += `- ${result}\n`;
+      }
+    }
+
+    alert(finalResult);
+  </script>
+</body>
+</html>

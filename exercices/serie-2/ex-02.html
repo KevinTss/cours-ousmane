@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercice 02</title>
+</head>
+<body>
+  <script>
+    /*
+      Ecrivez un programme qui calcule l’exposant d’un nombre.
+      Le programme doit donc demander à l’utilisateur de rentrer deux nombres, 
+      par exemples a et b et calcule et affiche ab
+    */
+
+    const number = Number(prompt('Entrer un nombre :'));
+    const exp = Number(prompt("Entrer l'exposant :"));
+
+    let result = number
+
+    /*
+      On répète la boucle en function l'exposant
+
+      ex:
+      2^3
+      - On boucle pour 3 (2 * 2 => 4)
+      - On boucle pour 2 (4 * 2 => 8)
+    */
+    for (i = exp; i > 1; i--) {
+      // Afficher le detail dans la console
+      console.log(`${result} * ${number}`)
+
+      // Mettre à jour le résultat
+      result *= number
+    }
+
+    alert(`${number} exposant ${exp} = ${result}`)
+  </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercice 03</title>
+</head>
+<body>
+  <script>
+    /*
+      Ecrire un progamme qui demande à notre professeur la liste des cotes d’une interro. Le
+      professeur entrera –1 lorsqu’il aura entrer toutes ses cotes. Le programme devra
+      ensuite afficher
+      • Le pourcentage des cotes qui sont < 10
+      • Le pourcentage des cotes qui sont = 10
+      • Le pourcentage des cotes qui sont > 10
+    */
+
+    const notes = [];
+    let shouldAskNote = true;
+
+    /*
+     * On demande les note tant que la valeur est vraie
+     */
+    while (shouldAskNote) {
+      const note = Number(prompt('Entrer une note :'));
+
+      // Si le prof à entré -1 on change la valeur pour stopper la boucle
+      if (note === -1) {
+        shouldAskNote = false;
+      } else { // Sinon on ajoute la note dans le tableau de notes
+        notes.push(note);
+      }
+    }
+
+    // on récupère le nombre de note inférieur à 10
+    const nbNoteUnder10 = notes.filter(note => note < 10).length;
+    // on récupère le nombre de note égale à 10
+    const nbNoteEqual10 = notes.filter(note => note === 10).length;
+    // on récupère le nombre de note supérieur à 10
+    const nbNoteHigher10 = notes.filter(note => note > 10).length;
+
+    const nbNotesTotal = notes.length;
+    const ratioUnder10 = nbNoteUnder10 / nbNotesTotal *  100;
+    const ratioEqual10 = nbNoteEqual10 / nbNotesTotal *  100;
+    const ratioHigher10 = nbNoteHigher10 / nbNotesTotal *  100;
+
+    const text = `Sur un total de ${nbNotesTotal} notes, il y a :
+    - ${ratioUnder10}% en dessous de 10
+    - ${ratioEqual10}% éqal à 10
+    - ${ratioHigher10}% au dessus de 10
+    `
+
+    alert(text);
+  </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercice 01</title>
+</head>
+<body>
+  <script>
+    /*
+      Ecrivez un programme qui lit un nombre compris entre 1 et 5, 
+      qui utilise ce nombrecomme un code pour afficher le message suivant :
+
+      Code 1 : message « Bonjour »
+      Code 2 : message « Comment ça va »
+      Code 3 : message « Il fait beau »
+      Code 4 : message « Merci »
+      Code 5 : message « Au revoir ».
+
+      Ce programme devrait être écrit selon 3 techniques :
+      Avec l’instruction conditionnelle de base
+      Avec le SinonSi
+      Avec le Selon que
+    */
+
+    let number = Number(prompt('Entrer un nombre en 1 et 5 :'));
+
+    // On re-demande si le nombre n'est pas entre 1 et 5
+    while (number < 1 || number > 5) {
+      number = Number(prompt('Réessayez: Entrer un nombre en 1 et 5 :'));
+    }
+
+    const sentences = [
+      "Bonjour",
+      "Comment ça va",
+      "Il fait beau",
+      "Merci",
+      "Au revoir",
+    ]
+
+    /*
+      METHODE 1: Condition
+    */
+    if (number === 1) {
+      alert(sentences[0]);
+    }
+    if (number === 2) {
+      alert(sentences[1]);
+    }
+    if (number === 3) {
+      alert(sentences[2]);
+    }
+    if (number === 4) {
+      alert(sentences[3]);
+    }
+    if (number === 5) {
+      alert(sentences[4]);
+    }
+
+    /*
+      METHODE 2: Sinon si
+    */
+    if (number === 1) {
+      alert(sentences[0]);
+    } else if (number === 2) {
+      alert(sentences[1]);
+    } else if (number === 3) {
+      alert(sentences[2]);
+    } else if (number === 4) {
+      alert(sentences[3]);
+    } else if (number === 5) {
+      alert(sentences[4]);
+    }
+
+    /*
+      METHODE 3: Selon que
+    */
+    switch (number) {
+      case 1:
+        alert(sentences[0]);
+        break;
+      case 2:
+        alert(sentences[1]);
+        break;
+      case 3:
+        alert(sentences[2]);
+        break;
+      case 4:
+        alert(sentences[3]);
+        break;
+      case 5:
+        alert(sentences[4]);
+        break;
+    }
+    
+  </script>
+</body>
+</html>
